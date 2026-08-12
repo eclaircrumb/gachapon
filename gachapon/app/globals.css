@@ -69,7 +69,7 @@ a { -webkit-tap-highlight-color: transparent; }
 }
 
 .art-logo { top: 5.6%; left: 0.6%; width: 25.6%; }
-.art-bird { top: 11.2%; left: 67.2%; width: 15.8%; }
+.art-bird { top: 11.2%; left: 75.6%; width: 15.8%; }
 .art-sign { top: 69.9%; left: 47.8%; width: 11.3%; }
 .art-raccoon { top: 52.9%; left: 57.9%; width: 24.8%; }
 
@@ -208,55 +208,18 @@ a { -webkit-tap-highlight-color: transparent; }
   border: 0;
 }
 
-.signature-cloud {
+.signature {
   position: absolute;
-  top: 17.2%;
-  right: 2.8%;
-  z-index: 2;
-  display: grid;
-  width: 11.5%;
-  aspect-ratio: 1.75;
-  place-items: center;
-  color: rgb(75 68 66 / 62%);
-  font-size: clamp(9px, 0.9vw, 13px);
-  letter-spacing: 0.035em;
+  right: clamp(10px, 1.5vw, 22px);
+  bottom: clamp(7px, 1.1vh, 14px);
+  z-index: 8;
+  color: rgb(75 68 66 / 58%);
+  font-size: clamp(9px, 0.8vw, 12px);
+  font-weight: 400;
+  letter-spacing: 0.04em;
   line-height: 1;
-  border: 2px solid rgb(81 73 69 / 54%);
-  border-radius: 46% 54% 48% 52% / 58% 52% 48% 42%;
-  background: rgb(253 246 238 / 92%);
-  filter: drop-shadow(1px 2px 1px rgb(80 69 61 / 8%));
-  animation: cozyWobbleOne 3.5s -1.3s ease-in-out infinite reverse;
-  user-select: none;
-}
-
-.signature-cloud::before,
-.signature-cloud::after {
-  position: absolute;
-  z-index: -1;
-  content: "";
-  border: 2px solid rgb(81 73 69 / 54%);
-  border-radius: 50%;
-  background: var(--paper);
-}
-
-.signature-cloud::before {
-  top: -31%;
-  left: 17%;
-  width: 39%;
-  height: 66%;
-}
-
-.signature-cloud::after {
-  top: -20%;
-  right: 13%;
-  width: 35%;
-  height: 58%;
-}
-
-.signature-cloud span {
-  position: relative;
-  z-index: 1;
   transform: rotate(-2deg);
+  user-select: none;
 }
 
 .drift-one { animation: cozyWobbleOne 3.2s -0.7s ease-in-out infinite; }
@@ -318,13 +281,7 @@ a { -webkit-tap-highlight-color: transparent; }
     aspect-ratio: auto;
   }
   .art-logo { top: 3%; left: 2%; width: 61%; }
-  .art-bird { top: 13%; right: 18%; left: auto; width: 31%; }
-  .signature-cloud {
-    top: 16%;
-    right: 1.5%;
-    width: 20%;
-    font-size: clamp(8px, 2.6vw, 10px);
-  }
+  .art-bird { top: 13%; right: 0; left: auto; width: 31%; }
   .machine-wrap { top: 25%; left: 2%; width: 68%; }
   .art-sign { top: 68%; left: 52%; width: 27%; }
   .art-raccoon { top: 58%; right: -4%; left: auto; width: 50%; }
@@ -338,6 +295,7 @@ a { -webkit-tap-highlight-color: transparent; }
     font-size: 11px;
   }
 
+  .signature { font-size: 9px; }
 }
 
 @media (max-width: 390px) {
