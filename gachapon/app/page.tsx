@@ -87,9 +87,7 @@ export default function Home() {
           draggable={false}
         />
 
-        <div className="signature-star" aria-label="Created by zihui">
-          <span>by zihui</span>
-        </div>
+        <small className="signature-credit">by zihui</small>
 
         <div className={`machine-wrap ${phase === "turning" ? "is-shaking" : ""}`}>
           <img
