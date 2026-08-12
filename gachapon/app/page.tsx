@@ -35,6 +35,11 @@ const PRIZES = [
     color: "#f4a261",
     href: "https://www.youtube.com/watch?v=jUl2P4fH5t8",
   },
+  {
+    label: "lila",
+    color: "#c9a7eb",
+    href: "https://byeorisim.itch.io/brush-jjaemu?utm_source=chatgpt.com",
+  },
 ] as const;
 
 type DrawPhase = "idle" | "turning" | "ready";
