@@ -7,8 +7,10 @@
 
 html,
 body {
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   margin: 0;
+  overflow: hidden;
 }
 
 body {
@@ -21,7 +23,10 @@ button,
 a { -webkit-tap-highlight-color: transparent; }
 
 .kiosk-page {
-  min-height: 100svh;
+  display: grid;
+  width: 100vw;
+  height: 100svh;
+  place-items: center;
   overflow: hidden;
   background-color: var(--paper);
   background-image:
@@ -34,10 +39,9 @@ a { -webkit-tap-highlight-color: transparent; }
 
 .kiosk-stage {
   position: relative;
-  width: min(100vw, 1329px);
-  min-height: 100svh;
+  width: min(100vw, calc(100svh * 1329 / 1030), 1329px);
+  height: min(100svh, calc(100vw * 1030 / 1329), 1030px);
   aspect-ratio: 1329 / 1030;
-  margin: 0 auto;
   isolation: isolate;
 }
 
@@ -257,7 +261,11 @@ a { -webkit-tap-highlight-color: transparent; }
     background-size: 190px 150px, 190px 150px, 100% 100%;
   }
 
-  .kiosk-stage { width: 100%; min-height: 900px; aspect-ratio: auto; }
+  .kiosk-stage {
+    width: 100vw;
+    height: 100svh;
+    aspect-ratio: auto;
+  }
   .art-logo { top: 3%; left: 2%; width: 61%; }
   .art-bird { top: 13%; right: 0; left: auto; width: 31%; }
   .machine-wrap { top: 25%; left: 2%; width: 68%; }
@@ -275,7 +283,6 @@ a { -webkit-tap-highlight-color: transparent; }
 }
 
 @media (max-width: 390px) {
-  .kiosk-stage { min-height: 800px; }
   .machine-wrap { top: 24%; width: 72%; }
   .art-raccoon { top: 59%; width: 51%; }
   .art-sign { top: 70%; }

@@ -5,8 +5,9 @@ export const metadata: Metadata = {
   title: "Hand-drawn Gacha",
   description: "Turn the hand-drawn gacha machine and discover a link.",
   icons: {
-    icon: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/favicon.svg`,
-    shortcut: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/favicon.svg`,
+    icon: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/art/raccoon.png`,
+    shortcut: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/art/raccoon.png`,
+    apple: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/art/raccoon.png`,
   },
 };
 
