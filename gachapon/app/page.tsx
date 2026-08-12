@@ -40,6 +40,11 @@ const PRIZES = [
     color: "#c9a7eb",
     href: "https://byeorisim.itch.io/brush-jjaemu?utm_source=chatgpt.com",
   },
+{
+    label: "Smaragdgrün",
+    color: "#00B271",
+    href: "https://www.thalia.de/shop/home/artikeldetails/A1073314744",
+  },
 ] as const;
 
 type DrawPhase = "idle" | "turning" | "ready";
