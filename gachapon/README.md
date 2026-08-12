@@ -1,4 +1,4 @@
-# Hand-drawn Gacha — GitHub Pages edition
+# Theo Kiosk — GitHub Pages edition
 
 This folder contains the complete website source and all original artwork.
 
