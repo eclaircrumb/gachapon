@@ -69,7 +69,7 @@ a { -webkit-tap-highlight-color: transparent; }
 }
 
 .art-logo { top: 5.6%; left: 0.6%; width: 25.6%; }
-.art-bird { top: 11.2%; left: 75.6%; width: 15.8%; }
+.art-bird { top: 11.2%; left: 67.2%; width: 15.8%; }
 .art-sign { top: 69.9%; left: 47.8%; width: 11.3%; }
 .art-raccoon { top: 52.9%; left: 57.9%; width: 24.8%; }
 
@@ -208,18 +208,41 @@ a { -webkit-tap-highlight-color: transparent; }
   border: 0;
 }
 
-.signature {
+.signature-star {
   position: absolute;
-  right: clamp(10px, 1.5vw, 22px);
-  bottom: clamp(7px, 1.1vh, 14px);
-  z-index: 8;
-  color: rgb(75 68 66 / 58%);
-  font-size: clamp(9px, 0.8vw, 12px);
-  font-weight: 400;
-  letter-spacing: 0.04em;
+  top: 12.8%;
+  right: 3.2%;
+  z-index: 2;
+  display: grid;
+  width: 12.5%;
+  aspect-ratio: 1;
+  place-items: center;
+  color: rgb(75 68 66 / 68%);
+  font-size: clamp(9px, 0.9vw, 13px);
+  letter-spacing: 0.035em;
   line-height: 1;
-  transform: rotate(-2deg);
+  background: rgb(81 73 69 / 58%);
+  clip-path: polygon(50% 2%, 61% 35%, 96% 34%, 68% 55%, 80% 91%, 50% 70%, 19% 94%, 31% 56%, 3% 34%, 39% 35%);
+  filter: drop-shadow(1px 2px 1px rgb(80 69 61 / 8%));
+  animation: cozyWobbleOne 3.5s -1.3s ease-in-out infinite reverse;
   user-select: none;
+}
+
+.signature-star::before {
+  position: absolute;
+  inset: 2px;
+  z-index: 0;
+  content: "";
+  background:
+    repeating-linear-gradient(9deg, transparent 0 5px, rgb(98 77 65 / 2%) 6px 7px),
+    rgb(253 246 238 / 96%);
+  clip-path: inherit;
+}
+
+.signature-star span {
+  position: relative;
+  z-index: 1;
+  transform: rotate(-3deg);
 }
 
 .drift-one { animation: cozyWobbleOne 3.2s -0.7s ease-in-out infinite; }
@@ -281,7 +304,13 @@ a { -webkit-tap-highlight-color: transparent; }
     aspect-ratio: auto;
   }
   .art-logo { top: 3%; left: 2%; width: 61%; }
-  .art-bird { top: 13%; right: 0; left: auto; width: 31%; }
+  .art-bird { top: 13%; right: 18%; left: auto; width: 31%; }
+  .signature-star {
+    top: 12.5%;
+    right: 1.5%;
+    width: 22%;
+    font-size: clamp(8px, 2.6vw, 10px);
+  }
   .machine-wrap { top: 25%; left: 2%; width: 68%; }
   .art-sign { top: 68%; left: 52%; width: 27%; }
   .art-raccoon { top: 58%; right: -4%; left: auto; width: 50%; }
@@ -295,7 +324,6 @@ a { -webkit-tap-highlight-color: transparent; }
     font-size: 11px;
   }
 
-  .signature { font-size: 9px; }
 }
 
 @media (max-width: 390px) {

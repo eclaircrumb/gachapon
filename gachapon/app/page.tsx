@@ -87,7 +87,7 @@ export default function Home() {
           draggable={false}
         />
 
-        <div className="signature-cloud" aria-label="Created by zihui">
+        <div className="signature-star" aria-label="Created by zihui">
           <span>by zihui</span>
         </div>
 
