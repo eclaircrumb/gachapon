@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Hand-drawn Gacha",
+  title: "kiosk",
   description: "Turn the hand-drawn gacha machine and discover a link.",
   icons: {
     icon: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/art/raccoon.png`,
