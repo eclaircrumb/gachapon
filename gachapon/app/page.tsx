@@ -3,12 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
-function asset(path: string) {
-  return `${BASE_PATH}${path}`;
-}
-
 const PRIZES = [
   {
     label: "a pink music capsule",
@@ -34,16 +28,6 @@ const PRIZES = [
     label: "an orange music capsule",
     color: "#f4a261",
     href: "https://www.youtube.com/watch?v=jUl2P4fH5t8",
-  },
-  {
-    label: "lila",
-    color: "#c9a7eb",
-    href: "https://byeorisim.itch.io/brush-jjaemu?utm_source=chatgpt.com",
-  },
-{
-    label: "Smaragdgrün",
-    color: "#00B271",
-    href: "https://www.thalia.de/shop/home/artikeldetails/A1073314744",
   },
 ] as const;
 
@@ -85,24 +69,22 @@ export default function Home() {
       <section className="kiosk-stage" aria-label="Hand-drawn link gacha kiosk">
         <img
           className="art art-logo drift-one"
-          src={asset("/art/logo.png")}
+          src="/art/logo.png"
           alt="Kiosk, with a small raccoon face"
           draggable={false}
         />
 
         <img
           className="art art-bird drift-two"
-          src={asset("/art/bird-cloud.png")}
+          src="/art/bird-cloud.png"
           alt="A small bird sitting on a cloud"
           draggable={false}
         />
 
-        <small className="signature-credit">by zihui</small>
-
         <div className={`machine-wrap ${phase === "turning" ? "is-shaking" : ""}`}>
           <img
             className="machine-art"
-            src={asset("/art/gacha-machine-original.png")}
+            src="/art/gacha-machine-original.png"
             alt="A hand-drawn capsule machine"
             draggable={false}
           />
@@ -118,30 +100,21 @@ export default function Home() {
                 : "Turn the gacha knob"
             }
           >
-            <img
-              src={asset("/art/draw-button-original.png")}
-              alt=""
-              draggable={false}
-            />
+            <img src="/art/draw-button-original.png" alt="" draggable={false} />
           </button>
 
           {prize && (
             <a
               key={drawCount}
               className="gacha-ball"
-              style={
-                {
-                  "--ball-color": prize.color,
-                  "--ball-mask": `url(${asset("/art/drop-ball-original.png")})`,
-                } as CSSProperties
-              }
+              style={{ "--ball-color": prize.color } as CSSProperties}
               href={prize.href}
               target="_blank"
               rel="noreferrer"
               aria-label={`Open your gacha link: ${prize.label}`}
             >
               <img
-                src={asset("/art/drop-ball-original.png")}
+                src="/art/drop-ball-original.png"
                 alt="Open the link inside this capsule"
                 draggable={false}
               />
@@ -155,26 +128,24 @@ export default function Home() {
 
         <img
           className="art art-sign drift-three"
-          src={asset("/art/sign.png")}
+          src="/art/sign.png"
           alt="A small sign showing five treats"
           draggable={false}
         />
 
         <img
           className="art art-raccoon drift-four"
-          src={asset("/art/raccoon.png")}
+          src="/art/raccoon.png"
           alt="A friendly raccoon mascot"
           draggable={false}
         />
 
         <img
           className="art art-cat drift-five"
-          src={asset("/art/cat.png")}
+          src="/art/cat.png"
           alt="A hand-drawn cat beside the raccoon"
           draggable={false}
         />
-
-        
 
         <p className="screen-reader-status" aria-live="polite">
           {phase === "turning" && "The gacha machine is drawing a link."}
@@ -188,7 +159,6 @@ export default function Home() {
             <span>③ wander</span>
           </div>
         )}
-
       </section>
     </main>
   );
