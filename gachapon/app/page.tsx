@@ -114,8 +114,8 @@ export default function Home() {
             disabled={phase === "turning"}
             aria-label={
               phase === "ready"
-                ? "Turn the gacha knob to draw again"
-                : "Turn the gacha knob"
+                ? ""
+                : ""
             }
           >
             <img
