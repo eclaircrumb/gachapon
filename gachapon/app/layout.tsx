@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "theo kiosk",
-  description: "Turn the hand-drawn gacha machine and discover a link.",
+  description: "theo theo",
   icons: {
     icon: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/art/raccoon.png`,
     shortcut: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/art/raccoon.png`,
