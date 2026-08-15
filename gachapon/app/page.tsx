@@ -168,11 +168,13 @@ export default function Home() {
         />
 
         <img
-  className="art art-cat drift-five"
-  src="/art/cat.png"
-  alt="A hand-drawn cat beside the raccoon"
-  draggable={false}
-/>
+          className="art art-cat drift-five"
+          src={asset("/art/cat.png")}
+          alt="A hand-drawn cat beside the raccoon"
+          draggable={false}
+        />
+
+        
 
         <p className="screen-reader-status" aria-live="polite">
           {phase === "turning" && "The gacha machine is drawing a link."}
