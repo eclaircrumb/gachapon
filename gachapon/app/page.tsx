@@ -148,9 +148,7 @@ export default function Home() {
             </a>
           )}
 
-          {phase === "ready" && prize && (
-            <p className="knob-note">turn again?</p>
-          )}
+          
         </div>
 
         <img
