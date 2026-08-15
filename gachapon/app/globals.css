@@ -72,6 +72,12 @@ a { -webkit-tap-highlight-color: transparent; }
 .art-bird { top: 11.2%; left: 67.2%; width: 15.8%; }
 .art-sign { top: 69.9%; left: 47.8%; width: 11.3%; }
 .art-raccoon { top: 52.9%; left: 57.9%; width: 24.8%; }
+.art-cat {
+  top: 55.5%;
+  left: 79%;
+  width: 12.8%;
+  z-index: 2;
+}
 
 .machine-wrap {
   position: absolute;
@@ -226,6 +232,9 @@ a { -webkit-tap-highlight-color: transparent; }
 .drift-two { animation: cozyWobbleTwo 3.6s -2.1s ease-in-out infinite; }
 .drift-three { animation: cozyWobbleOne 3.4s -1.8s ease-in-out infinite reverse; }
 .drift-four { animation: cozyWobbleTwo 3.8s -0.45s ease-in-out infinite reverse; }
+.drift-five {
+  animation: cozyWobbleTwo 3.6s -1.3s ease-in-out infinite;
+}
 
 @keyframes turnKnob {
   0% { transform: rotate(0deg) scale(1); }
@@ -291,6 +300,11 @@ a { -webkit-tap-highlight-color: transparent; }
   .art-sign { top: 68%; left: 52%; width: 27%; }
   .art-raccoon { top: 58%; right: -4%; left: auto; width: 50%; }
   .knob-note { font-size: 12px; }
+  .art-cat {
+  top: 59%;
+  left: 33%;
+  width: 24%;
+}
 
   .tiny-instruction {
     right: 6%;
@@ -306,6 +320,11 @@ a { -webkit-tap-highlight-color: transparent; }
   .machine-wrap { top: 24%; width: 72%; }
   .art-raccoon { top: 59%; width: 51%; }
   .art-sign { top: 70%; }
+  .art-cat {
+  top: 60%;
+  left: 31%;
+  width: 25%;
+}
 }
 
 @media (prefers-reduced-motion: reduce) {
