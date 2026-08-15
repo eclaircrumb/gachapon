@@ -148,7 +148,7 @@ export default function Home() {
             </a>
           )}
 
-          {phase === "ready"(
+          {phase === "ready" && (
             <p className="knob-note">turn again?</p>
           )}
         </div>
