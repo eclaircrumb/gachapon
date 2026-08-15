@@ -99,7 +99,7 @@ export default function Home() {
 
         <small className="signature-credit">by zihui</small>
 
-        <div className={`machine-wrap ${phase === "turning" ? "is-shaking" : ""}`}>
+        <div className={`machine-wrap ${phase === "" ? "is-shaking" : ""}`}>
           <img
             className="machine-art"
             src={asset("/art/gacha-machine-original.png")}
