@@ -149,7 +149,7 @@ export default function Home() {
           )}
 
           {phase === "ready" && (
-            <p className="knob-note">turn again?</p>
+            <p className="knob-note"> </p>
           )}
         </div>
 
