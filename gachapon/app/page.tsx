@@ -40,7 +40,7 @@ const PRIZES = [
     color: "#c9a7eb",
     href: "https://byeorisim.itch.io/brush-jjaemu?utm_source=chatgpt.com",
   },
-{
+  {
     label: "Smaragdgrün",
     color: "#00B271",
     href: "https://www.thalia.de/shop/home/artikeldetails/A1073314744",
@@ -174,8 +174,6 @@ export default function Home() {
           draggable={false}
         />
 
-        
-
         <p className="screen-reader-status" aria-live="polite">
           {phase === "turning" && "The gacha machine is drawing a link."}
           {prize && `Your capsule contains ${prize.label}.`}
@@ -188,7 +186,6 @@ export default function Home() {
             <span>③ wander</span>
           </div>
         )}
-
       </section>
     </main>
   );

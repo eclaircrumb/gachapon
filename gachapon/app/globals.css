@@ -70,19 +70,19 @@ a { -webkit-tap-highlight-color: transparent; }
 
 .art-logo { top: 5.6%; left: 0.6%; width: 25.6%; }
 .art-bird { top: 11.2%; left: 67.2%; width: 15.8%; }
-.art-sign { top: 69.9%; left: 47.8%; width: 11.3%; }
-.art-raccoon { top: 52.9%; left: 57.9%; width: 24.8%; }
+.art-sign { top: 69.9%; left: 42.5%; width: 11.3%; }
+.art-raccoon { top: 52.9%; left: 52.5%; width: 24.8%; }
 .art-cat {
-  top: 55.5%;
-  left: 79%;
-  width: 12.8%;
+  top: 52.9%;
+  left: 80.5%;
+  width: 19%;
   z-index: 2;
 }
 
 .machine-wrap {
   position: absolute;
   top: 31.5%;
-  left: 16.6%;
+  left: 11%;
   width: 30.9%;
   transform-origin: 50% 88%;
   filter: drop-shadow(0 5px 2px rgb(80 69 61 / 8%));
@@ -296,15 +296,15 @@ a { -webkit-tap-highlight-color: transparent; }
     right: 4%;
     font-size: clamp(8px, 2.6vw, 10px);
   }
-  .machine-wrap { top: 25%; left: 2%; width: 68%; }
-  .art-sign { top: 68%; left: 52%; width: 27%; }
-  .art-raccoon { top: 58%; right: -4%; left: auto; width: 50%; }
+  .machine-wrap { top: 25%; left: -2%; width: 68%; }
+  .art-sign { top: 68%; left: 42%; width: 27%; }
+  .art-raccoon { top: 58%; right: auto; left: 25%; width: 44%; }
   .knob-note { font-size: 12px; }
   .art-cat {
-  top: 59%;
-  left: 33%;
-  width: 24%;
-}
+    top: 58.5%;
+    left: 73%;
+    width: 27%;
+  }
 
   .tiny-instruction {
     right: 6%;
@@ -313,18 +313,17 @@ a { -webkit-tap-highlight-color: transparent; }
     justify-content: space-between;
     font-size: 11px;
   }
-
 }
 
 @media (max-width: 390px) {
-  .machine-wrap { top: 24%; width: 72%; }
-  .art-raccoon { top: 59%; width: 51%; }
-  .art-sign { top: 70%; }
+  .machine-wrap { top: 24%; left: -3%; width: 72%; }
+  .art-raccoon { top: 59%; left: 23%; width: 45%; }
+  .art-sign { top: 70%; left: 41%; }
   .art-cat {
-  top: 60%;
-  left: 31%;
-  width: 25%;
-}
+    top: 59%;
+    left: 72%;
+    width: 28%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
