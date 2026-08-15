@@ -70,7 +70,7 @@ a { -webkit-tap-highlight-color: transparent; }
 
 .art-logo { top: 5.6%; left: 0.6%; width: 25.6%; }
 .art-bird { top: 11.2%; left: 67.2%; width: 15.8%; }
-.art-sign { top: 68.0%; left: 42.5%; width: 10.3%; }
+.art-sign { top: 69.0%; left: 42.5%; width: 10.3%; }
 .art-raccoon { top: 51.0%; left: 54.5%; width: 23.0%; }
 .art-cat {
   top: 51.6%;
@@ -81,7 +81,7 @@ a { -webkit-tap-highlight-color: transparent; }
 
 .machine-wrap {
   position: absolute;
-  top: 29.5%;
+  top: 30.3%;
   left: 11%;
   width: 31.0%;
   transform-origin: 50% 88%;
