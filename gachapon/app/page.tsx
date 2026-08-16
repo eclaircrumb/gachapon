@@ -152,7 +152,7 @@ export default function Home() {
         </div>
 
         <img
-          className="art art-sign drift-three"
+          className="art art-sign"
           src={asset("/art/sign.png")}
           alt="A small sign showing five treats"
           draggable={false}
