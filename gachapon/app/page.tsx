@@ -138,7 +138,7 @@ export default function Home() {
               href={prize.href}
               target="_blank"
               rel="noreferrer"
-              aria-label={`Open your gacha link: ${prize.label}`}
+              aria-label={`  ${prize.label}`}
             >
               <img
                 src={asset("/art/drop-ball-original.png")}
