@@ -71,7 +71,7 @@ a { -webkit-tap-highlight-color: transparent; }
 .art-logo { top: 5.6%; left: -1%; width: 25.6%; }
 .art-bird { top: 10.0%; left: 67.2%; width: 15.8%; }
 .art-sign { top: 71.0%; left: 32.5%; width: 12.3%; }
-.art-raccoon { top: 51.0%; left: 45.5%; width: 23.0%; }
+.art-raccoon { top: 51.0%; left: 47.0%; width: 23.0%; }
 .art-cat {
   top: 51.6%;
   left: 80.5%;
@@ -82,7 +82,7 @@ a { -webkit-tap-highlight-color: transparent; }
 .machine-wrap {
   position: absolute;
   top: 30.3%;
-  left: -6%;
+  left: -4%;
   width: 31.0%;
   transform-origin: 50% 88%;
   filter: drop-shadow(0 5px 2px rgb(80 69 61 / 8%));
