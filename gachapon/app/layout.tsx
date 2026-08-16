@@ -5,9 +5,9 @@ export const metadata: Metadata = {
   title: "theo kiosk",
   description: "theo theo",
   icons: {
-    icon: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/art/raccoon.png`,
-    shortcut: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/art/raccoon.png`,
-    apple: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/art/raccoon.png`,
+    icon: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/art/icon.png`,
+    shortcut: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/art/icon.png`,
+    apple: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/art/icon.png`,
   },
 };
 
