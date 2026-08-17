@@ -307,7 +307,7 @@ a { -webkit-tap-highlight-color: transparent; }
     font-size: clamp(8px, 2.6vw, 10px);
   }
   .machine-wrap { top: 25%; left: -2%; width: 68%; }
-  .art-sign { top: 68%; left: 42%; width: 27%; }
+  .art-sign { top: 58%; left: 55%; width: 27%; }
   .art-raccoon { top: 58%; right: auto; left: 25%; width: 44%; }
   .knob-note { font-size: 12px; }
   .art-cat {
