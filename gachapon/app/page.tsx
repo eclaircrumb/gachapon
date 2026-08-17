@@ -173,7 +173,7 @@ export default function Home() {
         />
 
          <img
-          className="art art-alpaca drift-five"
+          className="art art-alpaca drift-six"
           src={asset("/art/alpaca.png")}
           alt="A hand-drawn alpaca beside the raccoon"
           draggable={false}
