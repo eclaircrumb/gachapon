@@ -172,7 +172,7 @@ export default function Home() {
           draggable={false}
         />
 
-         <img
+        <img
           className="art art-alpaca drift-six"
           src={asset("/art/alpaca.png")}
           alt="A hand-drawn alpaca beside the raccoon"
@@ -185,11 +185,11 @@ export default function Home() {
         </p>
 
         {phase === "ready" && prize && (
-         <div className="tiny-instruction" aria-hidden="true">
-  <span>① turn</span>
-  <span>② tap the ball</span>
-  <span>③ wander</span>
-</div>
+          <div className="tiny-instruction" aria-hidden="true">
+            <span>① turn</span>
+            <span>② tap the ball</span>
+            <span>③ wander</span>
+          </div>
         )}
       </section>
     </main>
