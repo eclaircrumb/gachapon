@@ -7,7 +7,7 @@
 
 html,
 body {
-  width: 100%;
+  width: 100
   height: 100%;
   margin: 0;
   overflow: hidden;
@@ -75,6 +75,13 @@ a { -webkit-tap-highlight-color: transparent; }
 .art-cat {
   top: 51.6%;
   left: 78.5%;
+  width: 21.6%;
+  z-index: 2;
+}
+
+.art-alpaca {
+  top: 51.6%;
+  left: 88.5%;
   width: 21.6%;
   z-index: 2;
 }
