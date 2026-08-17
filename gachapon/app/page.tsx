@@ -179,6 +179,13 @@ export default function Home() {
           draggable={false}
         />
 
+         <img
+          className="art art-bee drift-seven"
+          src={asset("/art/bee.png")}
+          alt="A hand-drawn bee"
+          draggable={false}
+        />
+
         <p className="screen-reader-status" aria-live="polite">
           {phase === "turning" && "The gacha machine is drawing a link."}
           {prize && `Your capsule contains ${prize.label}.`}
