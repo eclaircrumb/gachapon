@@ -180,7 +180,7 @@ export default function Home() {
         />
 
          <img
-          className="art art-bee drift-seven"
+          className="art art-bee drift-three"
           src={asset("/art/bee.png")}
           alt="A hand-drawn bee"
           draggable={false}
