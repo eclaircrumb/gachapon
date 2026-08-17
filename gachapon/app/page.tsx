@@ -172,6 +172,13 @@ export default function Home() {
           draggable={false}
         />
 
+         <img
+          className="art art-alpaca drift-five"
+          src={asset("/art/alpaca.png")}
+          alt="A hand-drawn alpaca beside the raccoon"
+          draggable={false}
+        />
+
         <p className="screen-reader-status" aria-live="polite">
           {phase === "turning" && "The gacha machine is drawing a link."}
           {prize && `Your capsule contains ${prize.label}.`}
