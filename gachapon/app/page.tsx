@@ -142,7 +142,7 @@ export default function Home() {
             >
               <img
                 src={asset("/art/drop-ball-original.png")}
-                alt="Open the link inside this capsule"
+                alt=" "
                 draggable={false}
               />
             </a>
