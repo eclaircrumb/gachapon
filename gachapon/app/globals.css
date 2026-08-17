@@ -70,18 +70,18 @@ a { -webkit-tap-highlight-color: transparent; }
 
 .art-logo { top: 5.6%; left: -1%; width: 25.6%; }
 .art-bird { top: 10.0%; left: 67.2%; width: 15.8%; }
-.art-sign { top: 71.0%; left: 30.0%; width: 12.3%; }
-.art-raccoon { top: 51.0%; left: 47.0%; width: 23.0%; }
+.art-sign { top: 71.0%; left: 27.0%; width: 12.3%; }
+.art-raccoon { top: 51.0%; left: 42.0%; width: 23.0%; }
 .art-cat {
   top: 51.6%;
-  left: 78.5%;
+  left: 70.5%;
   width: 21.6%;
    z-index: 2;
 }
 
 .art-alpaca {
   top: 51.6%;
-  left: 68%;
+  left: 80%;
   width: 18%;
   z-index: 3;
 }
