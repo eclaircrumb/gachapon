@@ -18,12 +18,12 @@ const PRIZES = [
   {
     label: "a yellow book capsule",
     color: "#ffd166",
-    href: "https://www.thalia.de/shop/home/artikeldetails/A1072795140",
+    href: "https://www.thalia.de/shop/home/artikeldetails/A1072022621",
   },
   {
     label: "a blue book capsule",
     color: "#8ecae6",
-    href: "https://www.thalia.de/shop/home/artikeldetails/A1062793535",
+    href: "https://www.thalia.de/shop/home/artikeldetails/A1073686468",
   },
   {
     label: "an aqua music capsule",
