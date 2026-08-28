@@ -72,8 +72,8 @@ a { -webkit-tap-highlight-color: transparent; }
 .art-bird { top: 10.0%; left: 36.0%; width: 15.8%; }
 .art-bee { top: 4.5%; left: 95.0%; width: 10.8%; }
 .art-weather-sign {
-  top: 71%;
-  left: -10%;
+  top: 69%;
+  left: -15%;
   z-index: 4;
   width: 20.5%;
 }
