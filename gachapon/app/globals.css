@@ -105,9 +105,9 @@ a { -webkit-tap-highlight-color: transparent; }
 .tags-menu-trigger {
   position: absolute;
   top: 4.5%;
-  right: 3%;
+  right: 7%;
   z-index: 6;
-  width: 12.5%;
+  width: 18.5%;
   padding: 0;
   cursor: pointer;
   border: 0;
