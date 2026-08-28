@@ -72,10 +72,10 @@ a { -webkit-tap-highlight-color: transparent; }
 .art-bird { top: 10.0%; left: 30.0%; width: 15.8%; }
 .art-bee { top: 4.5.0%; left: 95.0%; width: 10.8%; }
 .art-weather-sign {
-  top: 38%;
-  left: 0.8%;
+  top: 51%;
+  left: -5%;
   z-index: 4;
-  width: 10.5%;
+  width: 30.5%;
 }
 .art-sign { top: 71.0%; left: 30.0%; width: 12.3%; }
 .art-raccoon { top: 51.0%; left: 42.0%; width: 23.0%; }
