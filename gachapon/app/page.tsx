@@ -113,8 +113,8 @@ export default function Home() {
 
         <img
           className="art art-weather-sign drift-three"
-          src={asset("/art/wetter.png")}
-          alt="Weather sign"
+          src={asset("/wetter.png")}
+          alt=""
           draggable={false}
         />
 
@@ -126,8 +126,8 @@ export default function Home() {
           aria-haspopup="dialog"
         >
           <img
-            src={asset("/art/tagsmenu.png")}
-            alt="Tags menu"
+            src={asset("/tagsmenu.png")}
+            alt=""
             draggable={false}
           />
         </button>
@@ -246,8 +246,8 @@ export default function Home() {
           <div className="tags-modal-paper">
             <img
               className="tags-modal-image"
-              src={asset("/art/28aug.png")}
-              alt="Tags menu for 28 August"
+              src={asset("/28aug.png")}
+              alt=""
               draggable={false}
             />
             <button
