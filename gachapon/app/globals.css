@@ -71,6 +71,12 @@ a { -webkit-tap-highlight-color: transparent; }
 .art-logo { top: 5.6%; left: -1%; width: 25.6%; }
 .art-bird { top: 10.0%; left: 80.0%; width: 15.8%; }
 .art-bee { top: 17.0%; left: 55.0%; width: 10.8%; }
+.art-weather-sign {
+  top: 38%;
+  left: 0.8%;
+  z-index: 4;
+  width: 10.5%;
+}
 .art-sign { top: 71.0%; left: 25.0%; width: 12.3%; }
 .art-raccoon { top: 51.0%; left: 37.0%; width: 23.0%; }
 .art-cat {
@@ -95,6 +101,91 @@ a { -webkit-tap-highlight-color: transparent; }
   transform-origin: 50% 88%;
   filter: drop-shadow(0 5px 2px rgb(80 69 61 / 8%));
 }
+
+.tags-menu-trigger {
+  position: absolute;
+  top: 4.5%;
+  right: 3%;
+  z-index: 6;
+  width: 12.5%;
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  filter: drop-shadow(0 2px 1px rgb(80 69 61 / 8%));
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+.tags-menu-trigger img {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+.tags-menu-trigger:hover { filter: brightness(0.97) drop-shadow(0 3px 2px rgb(80 69 61 / 16%)); }
+.tags-menu-trigger:active { transform: scale(0.94); }
+
+.tags-menu-trigger:focus-visible,
+.tags-modal-close:focus-visible {
+  outline: 3px dashed #478f93;
+  outline-offset: 5px;
+}
+
+.tags-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  padding: clamp(18px, 4vw, 54px);
+  place-items: center;
+  background: rgb(72 64 59 / 28%);
+  backdrop-filter: blur(2px);
+  animation: tagsBackdropIn 180ms ease-out both;
+}
+
+.tags-modal-paper {
+  position: relative;
+  display: grid;
+  max-width: 100%;
+  max-height: 100%;
+  place-items: center;
+  animation: tagsMenuIn 260ms cubic-bezier(0.2, 0.8, 0.3, 1.08) both;
+}
+
+.tags-modal-image {
+  display: block;
+  width: auto;
+  max-width: min(90vw, 1100px);
+  height: auto;
+  max-height: 88svh;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 10px rgb(61 51 46 / 18%));
+  user-select: none;
+}
+
+.tags-modal-close {
+  position: absolute;
+  top: clamp(4px, 1.2vw, 14px);
+  right: clamp(4px, 1.2vw, 14px);
+  display: grid;
+  width: clamp(30px, 3.2vw, 42px);
+  aspect-ratio: 1;
+  padding: 0 0 3px;
+  cursor: pointer;
+  place-items: center;
+  color: rgb(71 64 61 / 78%);
+  font: inherit;
+  font-size: clamp(22px, 2.3vw, 32px);
+  line-height: 1;
+  border: 1.5px solid rgb(71 64 61 / 38%);
+  border-radius: 50%;
+  background: rgb(253 246 238 / 88%);
+}
+
+.tags-modal-close:hover { transform: rotate(5deg) scale(1.06); }
 
 .machine-art {
   position: relative;
@@ -224,7 +315,7 @@ a { -webkit-tap-highlight-color: transparent; }
 
 .signature-credit {
   position: absolute;
-  top: 4.5%;
+  top: 1.8%;
   right: 3%;
   z-index: 2;
   color: rgb(75 68 66 / 68%);
@@ -289,6 +380,16 @@ a { -webkit-tap-highlight-color: transparent; }
   75% { transform: translate(3px, 5px) rotate(0.8deg) scale(1.012); }
 }
 
+@keyframes tagsBackdropIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes tagsMenuIn {
+  from { opacity: 0; transform: translateY(14px) rotate(-1deg) scale(0.94); }
+  to { opacity: 1; transform: translateY(0) rotate(0deg) scale(1); }
+}
+
 @media (max-width: 700px) {
   .kiosk-page {
     background-position: 26px 28px, 115px 105px, 0 0;
@@ -302,8 +403,10 @@ a { -webkit-tap-highlight-color: transparent; }
   }
   .art-logo { top: 3%; left: 2%; width: 61%; }
   .art-bird { top: 13%; right: 8%; left: auto; width: 27%; }
+  .art-weather-sign { top: 43%; left: 1%; width: 20%; }
+  .tags-menu-trigger { top: 4%; right: 3%; width: 24%; }
   .signature-credit {
-    top: 3.5%;
+    top: 1.8%;
     right: 4%;
     font-size: clamp(8px, 2.6vw, 10px);
   }
@@ -345,6 +448,8 @@ a { -webkit-tap-highlight-color: transparent; }
     left: 55%;
     width: 37%;
   }
+  .art-weather-sign { top: 44%; width: 21%; }
+  .tags-menu-trigger { width: 25%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

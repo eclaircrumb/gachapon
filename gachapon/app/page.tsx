@@ -53,6 +53,7 @@ export default function Home() {
   const [phase, setPhase] = useState<DrawPhase>("idle");
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [drawCount, setDrawCount] = useState(0);
+  const [isTagsMenuOpen, setIsTagsMenuOpen] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -60,6 +61,17 @@ export default function Home() {
       if (timerRef.current) clearTimeout(timerRef.current);
     };
   }, []);
+
+  useEffect(() => {
+    if (!isTagsMenuOpen) return;
+
+    function closeWithEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") setIsTagsMenuOpen(false);
+    }
+
+    window.addEventListener("keydown", closeWithEscape);
+    return () => window.removeEventListener("keydown", closeWithEscape);
+  }, [isTagsMenuOpen]);
 
   function draw() {
     if (phase === "turning") return;
@@ -98,6 +110,27 @@ export default function Home() {
         />
 
         <small className="signature-credit">by zihui</small>
+
+        <img
+          className="art art-weather-sign drift-three"
+          src={asset("/art/wetter.png")}
+          alt="Weather sign"
+          draggable={false}
+        />
+
+        <button
+          className="tags-menu-trigger drift-two"
+          type="button"
+          onClick={() => setIsTagsMenuOpen(true)}
+          aria-label="Open tags menu"
+          aria-haspopup="dialog"
+        >
+          <img
+            src={asset("/art/tagsmenu.png")}
+            alt="Tags menu"
+            draggable={false}
+          />
+        </button>
 
         <div className={`machine-wrap ${phase === "turning" ? "is-shaking" : ""}`}>
           <img
@@ -199,6 +232,36 @@ export default function Home() {
           </div>
         )}
       </section>
+
+      {isTagsMenuOpen && (
+        <div
+          className="tags-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Tags menu"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) setIsTagsMenuOpen(false);
+          }}
+        >
+          <div className="tags-modal-paper">
+            <img
+              className="tags-modal-image"
+              src={asset("/art/28aug.png")}
+              alt="Tags menu for 28 August"
+              draggable={false}
+            />
+            <button
+              className="tags-modal-close"
+              type="button"
+              onClick={() => setIsTagsMenuOpen(false)}
+              aria-label="Close tags menu"
+              autoFocus
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
