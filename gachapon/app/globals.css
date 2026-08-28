@@ -69,11 +69,11 @@ a { -webkit-tap-highlight-color: transparent; }
 }
 
 .art-logo { top: 5.6%; left: -1%; width: 25.6%; }
-.art-bird { top: 10.0%; left: 30.0%; width: 15.8%; }
+.art-bird { top: 10.0%; left: 36.0%; width: 15.8%; }
 .art-bee { top: 4.5%; left: 95.0%; width: 10.8%; }
 .art-weather-sign {
-  top: 51%;
-  left: -5%;
+  top: 71%;
+  left: -10%;
   z-index: 4;
   width: 20.5%;
 }
