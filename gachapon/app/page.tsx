@@ -45,6 +45,11 @@ const PRIZES = [
     color: "#00B271",
     href: "https://www.thalia.de/shop/home/artikeldetails/A1073314744",
   },
+  {
+    label: "Smaragdgrün",
+    color: "#00B271",
+    href: "https://www.thalia.de/shop/home/artikeldetails/A1007514532",
+  },
 ] as const;
 
 type DrawPhase = "idle" | "turning" | "ready";
