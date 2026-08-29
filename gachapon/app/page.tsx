@@ -46,7 +46,7 @@ const PRIZES = [
     href: "https://www.thalia.de/shop/home/artikeldetails/A1073314744",
   },
   {
-    label: "Smaragdgrün",
+    label: "Smaragdgrün-book2",
     color: "#00B271",
     href: "https://www.thalia.de/shop/home/artikeldetails/A1007514532",
   },
