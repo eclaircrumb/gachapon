@@ -66,7 +66,18 @@ export default function Home() {
   const [drawCount, setDrawCount] = useState(0);
   const [isTagsMenuOpen, setIsTagsMenuOpen] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState<string>(MENUS[0]);
+  const [nextMenuIndex, setNextMenuIndex] = useState(0);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  function openNextMenu() {
+  setSelectedMenu(MENUS[nextMenuIndex]);
+
+  setNextMenuIndex((currentIndex) => {
+    return (currentIndex + 1) % MENUS.length;
+  });
+
+  setIsTagsMenuOpen(true);
+}
 
   useEffect(() => {
     return () => {
@@ -140,10 +151,17 @@ export default function Home() {
         <button
           className="tags-menu-trigger drift-two"
           type="button"
-          onClick={openRandomMenu}
+         onClick={openNextMenu}
           aria-label="Open tags menu"
           aria-haspopup="dialog"
         >
+
+          <img
+  className="tags-modal-image"
+  src={asset(selectedMenu)}
+  alt=""
+  draggable={false}
+/>
           <img
             src={asset("/art/tagsmenu.png")}
             alt=""
