@@ -10,6 +10,7 @@ function asset(path: string) {
 }
 
 const MENUS = [
+  "/art/29aug.png",
   "/art/28aug.png",
   "/art/30aug.png",
   "/art/31aug.png",
