@@ -149,25 +149,18 @@ export default function Home() {
         />
 
         <button
-          className="tags-menu-trigger drift-two"
-          type="button"
-         onClick={openNextMenu}
-          aria-label="Open tags menu"
-          aria-haspopup="dialog"
-        >
-
-          <img
-  className="tags-modal-image"
-  src={asset(selectedMenu)}
-  alt=""
-  draggable={false}
-/>
-          <img
-            src={asset("/art/tagsmenu.png")}
-            alt=""
-            draggable={false}
-          />
-        </button>
+  className="tags-menu-trigger drift-two"
+  type="button"
+  onClick={openNextMenu}
+  aria-label="Open tags menu"
+  aria-haspopup="dialog"
+>
+  <img
+    src={asset("/art/tagesmenu.png")}
+    alt=""
+    draggable={false}
+  />
+</button>
 
         <div className={`machine-wrap ${phase === "turning" ? "is-shaking" : ""}`}>
           <img
