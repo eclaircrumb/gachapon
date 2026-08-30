@@ -9,6 +9,11 @@ function asset(path: string) {
   return `${BASE_PATH}${path}`;
 }
 
+const MENUS = [
+  "/art/28aug.png",
+  "/art/30aug.png",
+] as const;
+
 const PRIZES = [
   {
     label: "a pink music capsule",
@@ -59,6 +64,7 @@ export default function Home() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [drawCount, setDrawCount] = useState(0);
   const [isTagsMenuOpen, setIsTagsMenuOpen] = useState(false);
+  const [selectedMenu, setSelectedMenu] = useState<string>(MENUS[0]);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -78,6 +84,13 @@ export default function Home() {
     return () => window.removeEventListener("keydown", closeWithEscape);
   }, [isTagsMenuOpen]);
 
+  function openRandomMenu() {
+  const randomIndex = Math.floor(Math.random() * MENUS.length);
+
+  setSelectedMenu(MENUS[randomIndex]);
+  setIsTagsMenuOpen(true);
+}
+  
   function draw() {
     if (phase === "turning") return;
 
@@ -126,7 +139,7 @@ export default function Home() {
         <button
           className="tags-menu-trigger drift-two"
           type="button"
-          onClick={() => setIsTagsMenuOpen(true)}
+          onClick={openRandomMenu}
           aria-label="Open tags menu"
           aria-haspopup="dialog"
         >
@@ -251,7 +264,7 @@ export default function Home() {
           <div className="tags-modal-paper">
             <img
               className="tags-modal-image"
-              src={asset("/art/28aug.png")}
+              src={asset(selectedMenu)}
               alt=""
               draggable={false}
             />
