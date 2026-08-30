@@ -156,7 +156,7 @@ export default function Home() {
   aria-haspopup="dialog"
 >
   <img
-    src={asset("/art/tagesmenu.png")}
+    src={asset("/art/tagsmenu.png")}
     alt=""
     draggable={false}
   />
