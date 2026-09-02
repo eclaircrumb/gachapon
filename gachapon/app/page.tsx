@@ -237,6 +237,13 @@ export default function Home() {
         />
 
         <img
+          className="art art-harmonic drift-seven"
+          src={asset("/art/harmonic.png")}
+          alt="A hand-drawn harmonic"
+          draggable={false}
+        />
+
+        <img
           className="art art-alpaca drift-six"
           src={asset("/art/alpaca.png")}
           alt="A hand-drawn alpaca beside the raccoon"
