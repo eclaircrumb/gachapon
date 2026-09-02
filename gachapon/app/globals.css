@@ -86,6 +86,13 @@ a { -webkit-tap-highlight-color: transparent; }
    z-index: 2;
 }
 
+.art-harmonic {
+  top: 21.6%;
+  left: 79%;
+  width: 21.6%;
+   z-index: 2;
+}
+
 .art-alpaca {
   top: 50.0%;
   left: 94.0%;
