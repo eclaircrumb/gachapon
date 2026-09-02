@@ -136,6 +136,7 @@ a { -webkit-tap-highlight-color: transparent; }
 .tags-menu-trigger:active { transform: scale(0.94); }
 
 .tags-menu-trigger:focus-visible,
+.tags-modal-arrow:focus-visible,
 .tags-modal-close:focus-visible {
   outline: 3px dashed #478f93;
   outline-offset: 5px;
@@ -171,6 +172,45 @@ a { -webkit-tap-highlight-color: transparent; }
   object-fit: contain;
   filter: drop-shadow(0 10px 10px rgb(61 51 46 / 18%));
   user-select: none;
+}
+
+.tags-modal-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  display: grid;
+  width: clamp(36px, 4vw, 52px);
+  aspect-ratio: 1;
+  padding: 0 0 5px;
+  cursor: pointer;
+  place-items: center;
+  color: rgb(71 64 61 / 82%);
+  font: inherit;
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1;
+  border: 1.5px solid rgb(71 64 61 / 32%);
+  border-radius: 50%;
+  background: rgb(253 246 238 / 88%);
+  filter: drop-shadow(0 2px 2px rgb(61 51 46 / 12%));
+  transform: translateY(-50%);
+  transition: transform 150ms ease, background 150ms ease;
+}
+
+.tags-modal-arrow-left {
+  left: clamp(8px, 2vw, 22px);
+}
+
+.tags-modal-arrow-right {
+  right: clamp(8px, 2vw, 22px);
+}
+
+.tags-modal-arrow:hover {
+  background: rgb(253 246 238 / 100%);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.tags-modal-arrow:active {
+  transform: translateY(-50%) scale(0.94);
 }
 
 .tags-modal-close {

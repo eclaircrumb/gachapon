@@ -66,19 +66,24 @@ export default function Home() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [drawCount, setDrawCount] = useState(0);
   const [isTagsMenuOpen, setIsTagsMenuOpen] = useState(false);
-  const [selectedMenu, setSelectedMenu] = useState<string>(MENUS[0]);
-  const [nextMenuIndex, setNextMenuIndex] = useState(0);
+  const [menuIndex, setMenuIndex] = useState(0);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  function openNextMenu() {
-  setSelectedMenu(MENUS[nextMenuIndex]);
+  function openMenu() {
+    setIsTagsMenuOpen(true);
+  }
 
-  setNextMenuIndex((currentIndex) => {
-    return (currentIndex + 1) % MENUS.length;
-  });
+  function showPreviousMenu() {
+    setMenuIndex((currentIndex) => {
+      return (currentIndex - 1 + MENUS.length) % MENUS.length;
+    });
+  }
 
-  setIsTagsMenuOpen(true);
-}
+  function showNextMenu() {
+    setMenuIndex((currentIndex) => {
+      return (currentIndex + 1) % MENUS.length;
+    });
+  }
 
   useEffect(() => {
     return () => {
@@ -91,19 +96,22 @@ export default function Home() {
 
     function closeWithEscape(event: KeyboardEvent) {
       if (event.key === "Escape") setIsTagsMenuOpen(false);
+      if (event.key === "ArrowLeft") {
+        setMenuIndex((currentIndex) => {
+          return (currentIndex - 1 + MENUS.length) % MENUS.length;
+        });
+      }
+      if (event.key === "ArrowRight") {
+        setMenuIndex((currentIndex) => {
+          return (currentIndex + 1) % MENUS.length;
+        });
+      }
     }
 
     window.addEventListener("keydown", closeWithEscape);
     return () => window.removeEventListener("keydown", closeWithEscape);
   }, [isTagsMenuOpen]);
 
-  function openRandomMenu() {
-  const randomIndex = Math.floor(Math.random() * MENUS.length);
-
-  setSelectedMenu(MENUS[randomIndex]);
-  setIsTagsMenuOpen(true);
-}
-  
   function draw() {
     if (phase === "turning") return;
 
@@ -150,18 +158,18 @@ export default function Home() {
         />
 
         <button
-  className="tags-menu-trigger drift-two"
-  type="button"
-  onClick={openNextMenu}
-  aria-label="Open tags menu"
-  aria-haspopup="dialog"
->
-  <img
-    src={asset("/art/tagsmenu.png")}
-    alt=""
-    draggable={false}
-  />
-</button>
+          className="tags-menu-trigger drift-two"
+          type="button"
+          onClick={openMenu}
+          aria-label="Open tags menu"
+          aria-haspopup="dialog"
+        >
+          <img
+            src={asset("/art/tagsmenu.png")}
+            alt=""
+            draggable={false}
+          />
+        </button>
 
         <div className={`machine-wrap ${phase === "turning" ? "is-shaking" : ""}`}>
           <img
@@ -282,12 +290,31 @@ export default function Home() {
           }}
         >
           <div className="tags-modal-paper">
+            <button
+              className="tags-modal-arrow tags-modal-arrow-left"
+              type="button"
+              onClick={showPreviousMenu}
+              aria-label="Previous menu"
+            >
+              ‹
+            </button>
+
             <img
               className="tags-modal-image"
-              src={asset(selectedMenu)}
+              src={asset(MENUS[menuIndex])}
               alt=""
               draggable={false}
             />
+
+            <button
+              className="tags-modal-arrow tags-modal-arrow-right"
+              type="button"
+              onClick={showNextMenu}
+              aria-label="Next menu"
+            >
+              ›
+            </button>
+
             <button
               className="tags-modal-close"
               type="button"
