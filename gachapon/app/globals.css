@@ -345,6 +345,11 @@ a { -webkit-tap-highlight-color: transparent; }
   animation: cozyWobbleOne 3.7s -0.8s ease-in-out infinite;
 }
 
+.drift-seven {
+  animation: cozyWobbleTwo 3.9s -2.2s ease-in-out infinite reverse;
+}
+
+
 @keyframes turnKnob {
   0% { transform: rotate(0deg) scale(1); }
   48% { transform: rotate(195deg) scale(1.08); }
