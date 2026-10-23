@@ -23,6 +23,11 @@ const PRIZES = [
     href: "https://www.youtube.com/watch?v=SIP5EfFAS3s",
   },
   {
+    label: "a pink music capsule",
+    color: "#ff9eb5",
+    href: "https://www.youtube.com/watch?v=RJ5FwXVif64&list=RDRJ5FwXVif64&start_radio=1",
+  },
+  {
     label: "a yellow book capsule",
     color: "#ffd166",
     href: "https://www.thalia.de/shop/home/artikeldetails/A1072022621",
