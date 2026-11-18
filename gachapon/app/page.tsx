@@ -48,9 +48,14 @@ const PRIZES = [
     href: "https://www.youtube.com/watch?v=jUl2P4fH5t8",
   },
   {
+    label: "an orange music capsule",
+    color: "#f4a261",
+    href: "https://www.thalia.de/shop/home/artikeldetails/A10681992538",
+  },
+  {
     label: "lila",
     color: "#c9a7eb",
-    href: "https://byeorisim.itch.io/brush-jjaemu?utm_source=chatgpt.com",
+    href: "https://www.thalia.de/shop/home/artikeldetails/A1075542894",
   },
   {
     label: "Smaragdgrün",
